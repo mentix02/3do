@@ -1,0 +1,37 @@
+{
+  "name": "3do",
+  "private": true,
+  "version": "1.0.0",
+  "description": "a simple todo app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mentix02/3do.git"
+  },
+  "keywords": [
+    "todo",
+    "express",
+    "node"
+  ],
+  "author": "mentix02",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mentix02/3do/issues"
+  },
+  "homepage": "https://github.com/mentix02/3do#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
