@@ -29,9 +29,9 @@ const TaskList: FC = () => {
   }, [dispatch]);
 
   return (
-    <Container>
+    <Container fluid>
       <Row>
-        <Col xs={12} sm={{ offset: 3, span: 6 }} md={{ offset: 3, span: 6 }}>
+        <Col xs={12} sm={12} md={{ offset: 3, span: 6 }}>
           <h3>my tasks</h3>
           <hr />
           {loading ? (

@@ -37,6 +37,12 @@ const TaskListItem = ({ task }: TaskListItemProps) => {
       break;
   }
 
+  if (task.completed) {
+    priorityHeading += " | completed 🎉";
+  } else {
+    priorityHeading += " | not completed 🚫";
+  }
+
   useEffect(() => {
     if (clonedTask.priority !== task.priority) {
       updateTask(clonedTask).then((updatedTask) => {
@@ -106,7 +112,9 @@ const TaskListItem = ({ task }: TaskListItemProps) => {
               <button hidden type="submit" />
             </Form>
           ) : (
-            task.content
+            <span className={task.completed ? "completed" : ""}>
+              {task.content}
+            </span>
           )}
         </Card.Text>
       </Card.Body>

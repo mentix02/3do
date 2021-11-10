@@ -5,7 +5,7 @@ const morgan = require("morgan");
 const express = require("express");
 const mongoose = require("mongoose");
 
-const routes = require("./routes");
+const taskRoutes = require("./routes/tasks");
 
 mongoose
   .connect(process.env.DB_HOST, {
@@ -19,7 +19,7 @@ mongoose
     app.use(morgan("dev"));
     app.use(express.json());
 
-    app.use("/api", routes);
+    app.use("/api", taskRoutes);
 
     app.listen(process.env.PORT, () => {
       console.log(

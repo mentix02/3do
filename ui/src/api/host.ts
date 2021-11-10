@@ -1,4 +1,4 @@
-const HOST = "http://localhost:3000/api";
+const HOST = "http://localhost:8000/api";
 
 const configureEndpoint = (endpoint: string) => `${HOST}/${endpoint}`;
 
