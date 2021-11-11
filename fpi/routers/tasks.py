@@ -1,3 +1,5 @@
+from typing import List
+
 from bson import ObjectId
 from decouple import config
 from pymongo import MongoClient
@@ -16,7 +18,7 @@ router = APIRouter()
     '/tasks',
     tags=['tasks'],
     summary='Get all tasks',
-    response_model=list[Task],
+    response_model=List[Task],
 )
 async def get_tasks():
     return list(db.tasks.find())
