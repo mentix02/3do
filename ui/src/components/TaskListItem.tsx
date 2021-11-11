@@ -97,7 +97,7 @@ const TaskListItem = ({ task }: TaskListItemProps) => {
           <span style={{ fontFamily: "monospace" }}>{priorityHeading}</span>
         )}
       </Card.Header>
-      <Card.Body className="clickable" onClick={toggleCompletedStatus}>
+      <Card.Body>
         <Card.Text as="div">
           {isEditing ? (
             <Form onSubmit={handleContentUpdate}>
